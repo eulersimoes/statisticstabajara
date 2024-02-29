@@ -2,9 +2,20 @@ package br.com.esg.statisticTabajara.domain.model;
 
 public class Estatistica {
 
+    private Integer numero_registros_total;
+
+    private Double MaiorNotaP1=0d;
+
+    private Double MaiorNotaP2=0d;
+
+    private Double MaiorNotaP3=0d;
+
+    private Double MaiorNotaTotal=0d;
+
     private Double mediaP1;
     private Double mediaP2;
     private Double mediaP3;
+
 
     private Double mediaTotal;
     private Double medianaP1;
@@ -28,7 +39,7 @@ public class Estatistica {
     }
 
     public void setMediaP1(Double mediaP1) {
-        this.mediaP1 = mediaP1;
+        this.mediaP1 = (mediaP1);
     }
 
     public Double getMediaP2() {
@@ -36,7 +47,7 @@ public class Estatistica {
     }
 
     public void setMediaP2(Double mediaP2) {
-        this.mediaP2 = mediaP2;
+        this.mediaP2 =  (mediaP2);
     }
 
     public Double getMediaP3() {
@@ -44,7 +55,7 @@ public class Estatistica {
     }
 
     public void setMediaP3(Double mediaP3) {
-        this.mediaP3 = mediaP3;
+        this.mediaP3 =  (mediaP3);
     }
 
     public Double getMediaTotal() {
@@ -149,5 +160,45 @@ public class Estatistica {
 
     public void setSeparatrizTotal(Double separatrizTotal) {
         this.separatrizTotal = separatrizTotal;
+    }
+
+    public Integer getNumero_registros_total() {
+        return numero_registros_total;
+    }
+
+    public void setNumero_registros_total(Integer numero_registros_total) {
+        this.numero_registros_total = numero_registros_total;
+    }
+
+    public Double getMaiorNotaP1() {
+        return MaiorNotaP1;
+    }
+
+    public void setMaiorNotaP1(Double maiorNotaP1) {
+        MaiorNotaP1 = maiorNotaP1;
+    }
+
+    public Double getMaiorNotaP2() {
+        return MaiorNotaP2;
+    }
+
+    public void setMaiorNotaP2(Double maiorNotaP2) {
+        MaiorNotaP2 = maiorNotaP2;
+    }
+
+    public Double getMaiorNotaP3() {
+        return MaiorNotaP3;
+    }
+
+    public void setMaiorNotaP3(Double maiorNotaP3) {
+        MaiorNotaP3 = maiorNotaP3;
+    }
+
+    public Double getMaiorNotaTotal() {
+        return MaiorNotaTotal;
+    }
+
+    public void setMaiorNotaTotal(Double maiorNotaTotal) {
+        MaiorNotaTotal = maiorNotaTotal;
     }
 }

@@ -65,10 +65,8 @@ public class CandidatoNota {
     }
 
     public Double getNotaTotal() {
-        return notaTotal;
+        return notaP1 + notaP2 + notaP3;
     }
 
-    public void setNotaTotal(Double notaTotal) {
-        this.notaTotal = notaTotal;
-    }
+
 }
