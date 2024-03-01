@@ -1,4 +1,4 @@
-package br.com.esg.statisticTabajara.util;
+package br.com.esg.statisticTabajara.util.nota;
 
 import br.com.esg.statisticTabajara.domain.model.CandidatoNota;
 
@@ -15,15 +15,17 @@ public class NotaUtil {
     public static List<CandidatoNota> loadDataFromCsv(String path) {
         try {
             List<CandidatoNota> listaRetorno = new ArrayList<CandidatoNota>();
-            BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\X4N8\\Desktop\\classific_tcdf_23.CSV"));
+            BufferedReader reader = new BufferedReader(new FileReader("C:\\temp\\classific_tcdf_23.CSV"));
             String line = null;
-            Integer lineCount=0;
+            Integer lineCount = 0;
             while ((line = reader.readLine()) != null) {
-                if (lineCount == 0){
+                if (lineCount == 0) {
                     lineCount++;
-                    continue;}
+                    continue;
+                }
                 String linha[] = line.split(";");
-                CandidatoNota cn = new CandidatoNota(linha[0],linha[1],Double.parseDouble(linha[2].replace(",",".")),Double.parseDouble(linha[3].replace(",",".")),Double.parseDouble(linha[4].replace(",",".")));
+                CandidatoNota cn = new CandidatoNota(linha[0], linha[1], Double.parseDouble(linha[2].replace(",", ".")),
+                        Double.parseDouble(linha[3].replace(",", ".")), Double.parseDouble(linha[4].replace(",", ".")));
                 listaRetorno.add(cn);
                 lineCount++;
             }

@@ -4,18 +4,17 @@ public class Estatistica {
 
     private Integer numero_registros_total;
 
-    private Double MaiorNotaP1=0d;
+    private Double MaiorNotaP1 = 0d;
 
-    private Double MaiorNotaP2=0d;
+    private Double MaiorNotaP2 = 0d;
 
-    private Double MaiorNotaP3=0d;
+    private Double MaiorNotaP3 = 0d;
 
-    private Double MaiorNotaTotal=0d;
+    private Double MaiorNotaTotal = 0d;
 
     private Double mediaP1;
     private Double mediaP2;
     private Double mediaP3;
-
 
     private Double mediaTotal;
     private Double medianaP1;
@@ -27,12 +26,6 @@ public class Estatistica {
     private Double modaP2;
     private Double modaP3;
     private Double modaTotal;
-
-    private Double separatrizP1;
-    private Double separatrizP2;
-    private Double separatrizP3;
-    private Double separatrizTotal;
-
 
     public Double getMediaP1() {
         return mediaP1;
@@ -47,7 +40,7 @@ public class Estatistica {
     }
 
     public void setMediaP2(Double mediaP2) {
-        this.mediaP2 =  (mediaP2);
+        this.mediaP2 = (mediaP2);
     }
 
     public Double getMediaP3() {
@@ -55,7 +48,7 @@ public class Estatistica {
     }
 
     public void setMediaP3(Double mediaP3) {
-        this.mediaP3 =  (mediaP3);
+        this.mediaP3 = (mediaP3);
     }
 
     public Double getMediaTotal() {
@@ -128,38 +121,6 @@ public class Estatistica {
 
     public void setModaTotal(Double modaTotal) {
         this.modaTotal = modaTotal;
-    }
-
-    public Double getSeparatrizP1() {
-        return separatrizP1;
-    }
-
-    public void setSeparatrizP1(Double separatrizP1) {
-        this.separatrizP1 = separatrizP1;
-    }
-
-    public Double getSeparatrizP2() {
-        return separatrizP2;
-    }
-
-    public void setSeparatrizP2(Double separatrizP2) {
-        this.separatrizP2 = separatrizP2;
-    }
-
-    public Double getSeparatrizP3() {
-        return separatrizP3;
-    }
-
-    public void setSeparatrizP3(Double separatrizP3) {
-        this.separatrizP3 = separatrizP3;
-    }
-
-    public Double getSeparatrizTotal() {
-        return separatrizTotal;
-    }
-
-    public void setSeparatrizTotal(Double separatrizTotal) {
-        this.separatrizTotal = separatrizTotal;
     }
 
     public Integer getNumero_registros_total() {
