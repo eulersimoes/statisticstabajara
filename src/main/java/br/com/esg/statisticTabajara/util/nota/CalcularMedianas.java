@@ -37,7 +37,7 @@ public class CalcularMedianas {
         estatistica.setMedianaTotal(CalcularMediana(listaNotasPTotal, tamanhoLista));
     }
 
-    private static Double CalcularMediana(List<Double> listaNotas, Integer tamanhoLista) {
+    protected static Double CalcularMediana(List<Double> listaNotas, Integer tamanhoLista) {
         Double mediana = 0d;
         listaNotas.sort(Comparator.naturalOrder());
         if (tamanhoLista % 2 == 0) { // par
