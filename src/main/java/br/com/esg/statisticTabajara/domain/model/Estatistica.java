@@ -17,6 +17,10 @@ public class Estatistica {
 
     private CandidatoNota MaiorNotaTotal;
 
+    private Double variancia;
+
+    private Double desvioPadrao;
+
     private Double mediaP1;
     private Double mediaP2;
     private Double mediaP3;
@@ -41,6 +45,22 @@ public class Estatistica {
     private List<Double> listaNotasQuartil1 = new ArrayList<Double>();
     private List<Double> listaNotasQuartil2 = new ArrayList<Double>();
     private List<Double> listaNotasQuartil3 = new ArrayList<Double>();
+
+    public Double getDesvioPadrao() {
+        return this.desvioPadrao;
+    }
+
+    public void setDesvioPadrao(Double desvioPadrao) {
+        this.desvioPadrao = desvioPadrao;
+    }
+
+    public Double getVariancia() {
+        return this.variancia;
+    }
+
+    public void setVariancia(Double variancia) {
+        this.variancia = variancia;
+    }
 
     public List<Double> getListaNotasQuartil1() {
         return this.listaNotasQuartil1;

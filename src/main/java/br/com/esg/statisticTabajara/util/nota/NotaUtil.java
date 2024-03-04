@@ -15,7 +15,9 @@ public class NotaUtil {
     public static List<CandidatoNota> loadDataFromCsv(String path) {
         try {
             List<CandidatoNota> listaRetorno = new ArrayList<CandidatoNota>();
-            BufferedReader reader = new BufferedReader(new FileReader("C:\\temp\\classific_tcdf_23.CSV"));
+            // BufferedReader reader = new BufferedReader(new
+            // FileReader("C:\\temp\\classific_tcdf_23.CSV"));
+            BufferedReader reader = new BufferedReader(new FileReader("C:\\temp\\SAMPLE.CSV"));
             String line = null;
             Integer lineCount = 0;
             while ((line = reader.readLine()) != null) {

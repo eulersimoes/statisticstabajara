@@ -46,9 +46,11 @@ public class CalcularQuartil {
         }
     }
 
+    // REFAZER, CALCULANDO ERRADO
     private static Double CaclularQuartilQ(Integer quartial, List<Double> listaNota) {
         Double valorq = 0d;
         Double posQuartiu = quartial * ((Double.valueOf(listaNota.size()) + 1) / 4);
+        posQuartiu -= 1;
 
         if (VerificarSeNumeroEDecimalUtil.verificarSeEDecimal(posQuartiu) == true) {
             Integer decimalPart = 0;
@@ -62,8 +64,9 @@ public class CalcularQuartil {
             if (decimalPart == 50) {
                 valorq = (listaNota.get(posQuartiu.intValue()) + listaNota.get(posQuartiu.intValue() + 1)) / 2;
             } else if (decimalPart > 50) {
-                valorq = listaNota.get(posQuartiu.intValue() + 1);
+                valorq = listaNota.get(Math.round(posQuartiu.intValue()));
             } else {
+                posQuartiu = posQuartiu < 1 ? posQuartiu = 1d : posQuartiu;
                 valorq = listaNota.get(posQuartiu.intValue() - 1);
             }
         } else {

@@ -14,6 +14,8 @@ public class EstatisticaUtil {
         CalcularMedianas.calcularMedianas(listaCandidatoNota, estatistica);
         CalcularQuartil.CalcularQuartis(listaCandidatoNota, estatistica);
         CalcularModas.CalcularModaTotal(listaCandidatoNota, estatistica);
+        CalcularVariancia.CalcularVarianciaTotal(listaCandidatoNota, estatistica);
+        CalcularDesvioPadrao.CalcularDesvioPadrao(listaCandidatoNota, estatistica);
         return estatistica;
     }
 }
