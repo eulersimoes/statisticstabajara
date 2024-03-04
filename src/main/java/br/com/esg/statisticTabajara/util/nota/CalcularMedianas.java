@@ -14,7 +14,7 @@ public class CalcularMedianas {
         Double medianap2 = 0d;
         Double medianap3 = 0d;
         Double medianaTotal = 0d;
-        Integer tamanhoLista = listaCandidatoNota.size() - 1;
+        // Integer tamanhoLista = listaCandidatoNota.size() - 1;
         // Se a quantidade de elementos por ímpar, a mediana é o (tamanho da lista +1)
         // /2,
         // Se for par a mediana é a média dos números nas posições (tamanho da lista /2)
@@ -31,17 +31,20 @@ public class CalcularMedianas {
             listaNotasPTotal.add(candidatoNota.getNotaTotal());
         }
 
-        estatistica.setMedianaP1(CalcularMediana(listaNotasP1, tamanhoLista));
-        estatistica.setMedianaP2(CalcularMediana(listaNotasP2, tamanhoLista));
-        estatistica.setMedianaP3(CalcularMediana(listaNotasP3, tamanhoLista));
-        estatistica.setMedianaTotal(CalcularMediana(listaNotasPTotal, tamanhoLista));
+        estatistica.setMedianaP1(CalcularMediana(listaNotasP1));
+        estatistica.setMedianaP2(CalcularMediana(listaNotasP2));
+        estatistica.setMedianaP3(CalcularMediana(listaNotasP3));
+        estatistica.setMedianaTotal(CalcularMediana(listaNotasPTotal));
+        estatistica.setListaNotasTotal(listaNotasPTotal);
     }
 
-    protected static Double CalcularMediana(List<Double> listaNotas, Integer tamanhoLista) {
+    protected static Double CalcularMediana(List<Double> listaNotas) {
         Double mediana = 0d;
+        Integer tamanhoLista = listaNotas.size();
         listaNotas.sort(Comparator.naturalOrder());
         if (tamanhoLista % 2 == 0) { // par
-            mediana = (listaNotas.get(tamanhoLista / 2) + listaNotas.get((tamanhoLista + 1) / 2)) / 2;
+            Integer elementoCentralLista = tamanhoLista / 2;
+            mediana = (listaNotas.get(elementoCentralLista) + listaNotas.get(elementoCentralLista + 1)) / 2;
         } else { // impar
             mediana = listaNotas.get((tamanhoLista + 1) / 2);
         }

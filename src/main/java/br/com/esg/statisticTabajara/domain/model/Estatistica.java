@@ -1,5 +1,10 @@
 package br.com.esg.statisticTabajara.domain.model;
 
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Objects;
+
 public class Estatistica {
 
     private Integer numero_registros_total;
@@ -26,6 +31,72 @@ public class Estatistica {
     private Double modaP2;
     private Double modaP3;
     private Double modaTotal;
+
+    private Double Quartil1Total;
+    private Double Quartil2Total;
+    private Double Quartil3Total;
+
+    private List<Double> listaNotasTotal = new ArrayList<Double>();
+
+    private List<Double> listaNotasQuartil1 = new ArrayList<Double>();
+    private List<Double> listaNotasQuartil2 = new ArrayList<Double>();
+    private List<Double> listaNotasQuartil3 = new ArrayList<Double>();
+
+    public List<Double> getListaNotasQuartil1() {
+        return this.listaNotasQuartil1;
+    }
+
+    public void setListaNotasQuartil1(List<Double> listaNotasQuartil1) {
+        this.listaNotasQuartil1 = listaNotasQuartil1;
+    }
+
+    public List<Double> getListaNotasQuartil2() {
+        return this.listaNotasQuartil2;
+    }
+
+    public void setListaNotasQuartil2(List<Double> listaNotasQuartil2) {
+        this.listaNotasQuartil2 = listaNotasQuartil2;
+    }
+
+    public List<Double> getListaNotasQuartil3() {
+        return this.listaNotasQuartil3;
+    }
+
+    public void setListaNotasQuartil3(List<Double> listaNotasQuartil3) {
+        this.listaNotasQuartil3 = listaNotasQuartil3;
+    }
+
+    public List<Double> getListaNotasTotal() {
+        return this.listaNotasTotal;
+    }
+
+    public void setListaNotasTotal(List<Double> listaNotasTotal) {
+        this.listaNotasTotal = listaNotasTotal;
+    }
+
+    public Double getQuartil1Total() {
+        return this.Quartil1Total;
+    }
+
+    public void setQuartil1Total(Double Quartil1Total) {
+        this.Quartil1Total = Quartil1Total;
+    }
+
+    public Double getQuartil2Total() {
+        return this.Quartil2Total;
+    }
+
+    public void setQuartil2Total(Double Quartil2Total) {
+        this.Quartil2Total = Quartil2Total;
+    }
+
+    public Double getQuartil3Total() {
+        return this.Quartil3Total;
+    }
+
+    public void setQuartil3Total(Double Quartil3Total) {
+        this.Quartil3Total = Quartil3Total;
+    }
 
     public Double getMediaP1() {
         return mediaP1;
