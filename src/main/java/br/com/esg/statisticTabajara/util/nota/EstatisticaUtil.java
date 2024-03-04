@@ -13,6 +13,7 @@ public class EstatisticaUtil {
         CalcularMedias.calcularMedias(listaCandidatoNota, estatistica);
         CalcularMedianas.calcularMedianas(listaCandidatoNota, estatistica);
         CalcularQuartil.CalcularQuartis(listaCandidatoNota, estatistica);
+        CalcularModas.CalcularModaTotal(listaCandidatoNota, estatistica);
         return estatistica;
     }
 }

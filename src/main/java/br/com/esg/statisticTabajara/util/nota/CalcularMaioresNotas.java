@@ -9,17 +9,21 @@ public class CalcularMaioresNotas {
 
     protected static void CalcularMaioresNotas(List<CandidatoNota> listaCandidatoNota, Estatistica estatistica) {
         for (CandidatoNota candidatoNota : listaCandidatoNota) {
-            if (candidatoNota.getNotaP1() > estatistica.getMaiorNotaP1()) {
-                estatistica.setMaiorNotaP1(candidatoNota.getNotaP1());
+            if (estatistica.getMaiorNotaP1() == null
+                    || candidatoNota.getNotaP1() > estatistica.getMaiorNotaP1().getNotaP1()) {
+                estatistica.setMaiorNotaP1(candidatoNota);
             }
-            if (candidatoNota.getNotaP2() > estatistica.getMaiorNotaP2()) {
-                estatistica.setMaiorNotaP2(candidatoNota.getNotaP2());
+            if (estatistica.getMaiorNotaP2() == null
+                    || candidatoNota.getNotaP2() > estatistica.getMaiorNotaP2().getNotaP2()) {
+                estatistica.setMaiorNotaP2(candidatoNota);
             }
-            if (candidatoNota.getNotaP3() > estatistica.getMaiorNotaP3()) {
-                estatistica.setMaiorNotaP3(candidatoNota.getNotaP3());
+            if (estatistica.getMaiorNotaP3() == null
+                    || candidatoNota.getNotaP3() > estatistica.getMaiorNotaP3().getNotaP3()) {
+                estatistica.setMaiorNotaP3(candidatoNota);
             }
-            if (candidatoNota.getNotaTotal() > estatistica.getMaiorNotaTotal()) {
-                estatistica.setMaiorNotaTotal(candidatoNota.getNotaTotal());
+            if (estatistica.getMaiorNotaTotal() == null
+                    || candidatoNota.getNotaTotal() > estatistica.getMaiorNotaTotal().getNotaTotal()) {
+                estatistica.setMaiorNotaTotal(candidatoNota);
             }
         }
     }

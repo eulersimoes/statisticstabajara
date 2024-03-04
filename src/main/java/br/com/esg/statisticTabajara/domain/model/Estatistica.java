@@ -9,13 +9,13 @@ public class Estatistica {
 
     private Integer numero_registros_total;
 
-    private Double MaiorNotaP1 = 0d;
+    private CandidatoNota MaiorNotaP1;
 
-    private Double MaiorNotaP2 = 0d;
+    private CandidatoNota MaiorNotaP2;
 
-    private Double MaiorNotaP3 = 0d;
+    private CandidatoNota MaiorNotaP3;
 
-    private Double MaiorNotaTotal = 0d;
+    private CandidatoNota MaiorNotaTotal;
 
     private Double mediaP1;
     private Double mediaP2;
@@ -202,35 +202,35 @@ public class Estatistica {
         this.numero_registros_total = numero_registros_total;
     }
 
-    public Double getMaiorNotaP1() {
+    public CandidatoNota getMaiorNotaP1() {
         return MaiorNotaP1;
     }
 
-    public void setMaiorNotaP1(Double maiorNotaP1) {
+    public void setMaiorNotaP1(CandidatoNota maiorNotaP1) {
         MaiorNotaP1 = maiorNotaP1;
     }
 
-    public Double getMaiorNotaP2() {
+    public CandidatoNota getMaiorNotaP2() {
         return MaiorNotaP2;
     }
 
-    public void setMaiorNotaP2(Double maiorNotaP2) {
+    public void setMaiorNotaP2(CandidatoNota maiorNotaP2) {
         MaiorNotaP2 = maiorNotaP2;
     }
 
-    public Double getMaiorNotaP3() {
+    public CandidatoNota getMaiorNotaP3() {
         return MaiorNotaP3;
     }
 
-    public void setMaiorNotaP3(Double maiorNotaP3) {
+    public void setMaiorNotaP3(CandidatoNota maiorNotaP3) {
         MaiorNotaP3 = maiorNotaP3;
     }
 
-    public Double getMaiorNotaTotal() {
+    public CandidatoNota getMaiorNotaTotal() {
         return MaiorNotaTotal;
     }
 
-    public void setMaiorNotaTotal(Double maiorNotaTotal) {
+    public void setMaiorNotaTotal(CandidatoNota maiorNotaTotal) {
         MaiorNotaTotal = maiorNotaTotal;
     }
 }
