@@ -8,7 +8,7 @@ import java.util.List;
 import br.com.esg.statisticTabajara.domain.model.CandidatoNota;
 import br.com.esg.statisticTabajara.domain.model.Estatistica;
 
-public class CalcularQuartis {
+public class CalcularQuartil {
 
     protected static void CalcularQuartis(List<CandidatoNota> listaCandidatoNota, Estatistica estatistica) {
         List<Double> listaNota = new ArrayList<Double>();
